@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Complexicator score{% endblock %}
+
+{% block content %}
+
+<div class="jumbotron">
+	<h1>Behold, your score!</h1>
+	<br />
+	{% if complexity == 0 %}
+	<p>Eh, scratch that. Your life is easy.</p>
+	{% else %}
+	<div class="progress">
+	  <div class="progress-bar{% if level == "low" %}
+    	 progress-bar-info
+    {% endif %}
+    {% if level == "medium" %}
+    	 progress-bar-success
+    {% endif %}
+    {% if level == "high" %}
+    	 progress-bar-warning
+    {% endif %}
+    {% if level == "extreme" %}
+    	 progress-bar-danger
+    {% endif %}" role="progressbar" aria-valuenow="{{complexity}}" aria-valuemin="0" aria-valuemax="100" style="width: {{complexity}}%;"><span class="sr-only">{{complexity}}% complexity</span></div>
+	</div>
+	<p>{{interpretation}}</p>
+	{% endif %}
+	<p><br /><a href="/complexicator">&gt;&gt; Retake quiz</a></p>
+</div>
+		
+{% endblock %}

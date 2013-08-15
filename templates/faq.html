@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% block title %}FAQ{% endblock %}
+
+{% block content %}
+
+<div class="row">
+		<div class="col-lg-4">
+		<h2>Go on. Play with the accordion. Toggle answers. It's not very useful, but it's an example of JavaScript. </h2>
+		</div>
+<div class="col-lg-8">
+
+<div class="accordion" id="accordion2">
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+        Why so many cats?
+      </a>
+    </div>
+    <div id="collapseOne" class="accordion-body collapse in">
+      <div class="accordion-inner">
+        Cats are awesome. Nuff said.
+      </div>
+    </div>
+  </div>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+        Tell me more.
+      </a>
+    </div>
+    <div id="collapseTwo" class="accordion-body collapse">
+      <div class="accordion-inner">
+        <p>Pellentesque et nisi velit. Quisque ultrices magna tellus. Nunc sit amet interdum dui. Praesent consectetur lorem lorem, in hendrerit magna vehicula sit amet. Nulla sollicitudin libero eget ipsum volutpat aliquam. Nulla a nisl molestie, tincidunt neque eget, pellentesque turpis. Aliquam convallis tortor sit amet cursus cursus.</p>
+
+        <p>Pellentesque consectetur tempus libero, quis placerat nisi ultricies a. Nunc nunc tortor, gravida eleifend varius id, volutpat nec metus. Vivamus ac varius massa, eget gravida nisi. Proin dignissim tellus congue sem euismod lacinia.</p>
+
+		<p>Aenean molestie dui ligula, ac placerat nisi venenatis at. Morbi sed sapien elit. Suspendisse tempor quam a ipsum vulputate ullamcorper. Duis dignissim risus ac ullamcorper ultricies. Aliquam pretium elit tristique neque aliquet egestas. Nunc in dignissim dolor.</p> 
+
+      </div>
+    </div>
+  </div>
+  <div class="accordion-group">
+    <div class="accordion-heading">
+      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+        I still don't get it.
+      </a>
+    </div>
+    <div id="collapseThree" class="accordion-body collapse">
+      <div class="accordion-inner">
+        <p>Vivamus nisi neque, rutrum condimentum viverra quis, mattis non libero. Nulla sapien neque, consequat nec pharetra eget, dapibus ac elit. Mauris ligula nisi, pulvinar et euismod ac, imperdiet vel turpis. Vivamus nec libero ut felis placerat ullamcorper. Fusce eu facilisis lacus. Maecenas interdum tristique gravida.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+{% endblock %}

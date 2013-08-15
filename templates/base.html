@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<!-- making sure the app always find the static folder with bootstrap -->
+		<link href="{{ url_for('.static', filename='bootstrap/css/bootstrap.css') }}" rel="stylesheet" />
+		<link href="{{ url_for('.static', filename='css/bootstrap.icon-large.min.css') }}" rel="stylesheet" />
+		<link href="{{ url_for('.static', filename='css/custom.css') }}" rel="stylesheet" />
+		<title>BWeb - {% block title %}{% endblock %}</title>
+	</head>
+
+	<body>
+
+
+
+
+<!-- BOOTSTRAP 3.x LAYOUT -->
+<div class="navbar-wrapper">
+  <div class="container">
+
+    <div class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+	    <a class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	      <span class="icon-bar"></span>
+	    </a>
+        <a class="navbar-brand" href="/">BWeb</a>
+        <div class="nav-collapse collapse">
+          <ul class="nav navbar-nav">
+		    <li><a href="/cats">Cats</a></li>
+		    <li><a href="/hipster">Hipster</a></li>
+		    <li><a href="/grumpy">Grumpy</a></li>
+		    <li><a href="/complexicator">Quiz</a></li>
+		    <li><a href="/faq">FAQ</a></li>
+		    <li><a href="/moar">Moar</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- Carousel
+================================================== -->
+<div id="myCarousel" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="item active">
+      <img src="http://lorempixel.com/800/300/cats">
+      <div class="container">
+        <div class="carousel-caption">
+          <h1>Beautiful web</h1>
+ 
+          <p>{{ self.title() }}</p>
+
+      	</div>
+      </div>
+    </div>
+  </div>
+</div><!-- /.carousel -->
+
+
+
+
+
+	<div class="container">
+
+			{% block content %}
+			{% endblock %}
+
+	</div>
+
+
+<div class="navbar navbar-fixed-bottom">
+  <div class="row">
+  	<div class="col-lg-12">
+		<br/><p class="pull-right"><a href="#">Back to top</a></p>
+	    <p>Created with <a href="http://flask.pocoo.org">Flask</a>, <a href="http://getbootstrap.com">Bootstrap</a>, <a href="http://www.bootply.com/62603">Bootply</a>, <a href="http://glyphicons.com/">Glyphicons</a>, <a href="http://marcoceppi.github.io/bootstrap-glyphicons/">Bootstrap Glyphicons</a> and a lot of cat hair.</p>
+  	</div>
+  </div>
+</div>
+
+
+	<script src="{{ url_for('.static', filename='js/jquery-1.10.2.min.js') }}"></script>
+	<script src="{{ url_for('.static', filename='bootstrap/js/bootstrap.js') }}"></script>
+
+	</body>
+</html>

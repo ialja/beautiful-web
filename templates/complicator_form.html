@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+
+{% block title %}Complexicator{% endblock %}
+
+{% block content %}
+
+	<h2>How complex is your life?</h2>
+
+	<br />
+
+	<form name="complicators" action="/complexicator" method="post" class="form-horizontal" role="form">
+	  <div class="form-group{% if error_age %} has-error{% endif %}">
+	    <label for="age" class="col-lg-3 control-label">How old are you?</label>
+	    <div class="col-lg-9">
+	    	{% if error_age %}<label class="control-label">{{error_age}}</label>{% endif %}
+	      	<input type="text" class="form-control" id="age" placeholder="Your age" name="age" value="{{age}}" />
+	    </div>
+	  </div>
+	  
+	<div class="form-group">
+	  	<label for="gender" class="col-lg-3 control-label">Your gender?</label>
+	  	<div class="col-lg-9">
+		  	<label class="radio-inline">
+			  <input type="radio" name="gender" id="gender1" value="1" /> Male
+			</label>
+			<label class="radio-inline">
+			  <input type="radio" name="gender" id="gender2" value="10" checked="checked" /> Female
+			</label>
+		</div>
+	</div>
+
+	<div class="form-group">
+	  	<label for="status" class="col-lg-3 control-label">Relationship status?</label>
+	  	<div class="col-lg-9">
+		  	<label class="radio-inline">
+			  <input type="radio" name="status" id="status1" value="2" /> single
+			</label>
+			<label class="radio-inline">
+			  <input type="radio" name="status" id="status2" value="4" /> in a relationship
+			</label>
+			<label class="radio-inline">
+			  <input type="radio" name="status" id="status2" value="6" /> open relationship
+			</label>
+			<label class="radio-inline">
+			  <input type="radio" name="status" id="status2" value="8" /> it's complicated
+			</label>
+			<label class="radio-inline">
+			  <input type="radio" name="status" id="status2" value="10" checked="checked" /> I'm a pizza
+			</label>
+			<label class="radio-inline">
+			  <input type="radio" name="status" id="status2" value="0" /> depends who asks
+			</label>
+		</div>
+	</div>
+
+	<div class="form-group{% if error_ignorance %} has-error{% endif %}">
+	    <label for="ignorance" class="col-lg-3 control-label">How ignorant are you?</label>
+	    <div class="col-lg-9">
+	    	{% if error_ignorance %}<label class="control-label">{{error_ignorance}}</label>{% endif %}
+	      	<input type="text" class="form-control" id="ignorance" placeholder="Estimated ignorance" name="ignorance" value="{{ignorance}}" />
+	    </div>
+	</div>
+
+	<div class="form-group{% if error_m_have %} has-error{% endif %}">
+	    <label for="money_have" class="col-lg-3 control-label">How much money do you have?</label>
+	    <div class="col-lg-9">
+	    	{% if error_m_have %}<label class="control-label">{{error_m_have}}</label>{% endif %}
+	      	<input type="text" class="form-control" id="money_have" placeholder="Estimated balance today in €" name="money_have" value="{{money_have}}" />
+	    </div>
+	</div>
+
+	<div class="form-group{% if error_m_wants %} has-error{% endif %}">
+	    <label for="money_wants" class="col-lg-3 control-label">How much money do you want?</label>
+	    <div class="col-lg-9">
+	    	{% if error_m_wants %}<label class="control-label">{{error_m_wants}}</label>{% endif %}
+	      	<input type="text" class="form-control" id="money_wants" placeholder="Estimated needs today in €" name="money_wants" value="{{money_wants}}" />
+	    </div>
+	</div>
+
+	<div class="form-group{% if error_m_spent %} has-error{% endif %}">
+	    <label for="money_spent" class="col-lg-3 control-label">How much money did you spend?</label>
+	    <div class="col-lg-9">
+	    	{% if error_m_spent %}<label class="control-label">{{error_m_spent}}</label>{% endif %}
+	      	<input type="text" class="form-control" id="money_spent" placeholder="Estimated spent today in €" name="money_spent" value="{{money_spent}}" />
+	    </div>
+	</div>
+
+	<div class="form-group{% if error_klout %} has-error{% endif %}">
+	    <label for="popularity_online" class="col-lg-3 control-label">Your Klout score?</label>
+	    <div class="col-lg-9">
+	    	{% if error_klout %}<label class="control-label">{{error_klout}}</label>{% endif %}
+	      	<input type="text" class="form-control" id="popularity_online" placeholder="Write 0 if you don't use Klout" name="popularity_online" value="{{popularity_online}}" />
+	    </div>
+	</div>
+
+	<div class="form-group">
+	  	<label for="rl_friends" class="col-lg-3 control-label">How many real friends do you have?</label>
+	  	<div class="col-lg-9">
+		  	<label class="radio-inline">
+			  <input type="radio" name="rl_friends" id="rl_friends1" value="0" checked="checked" /> 0 - 2
+			</label>
+			<label class="radio-inline">
+			  <input type="radio" name="rl_friends" id="rl_friends2" value="4" /> 3 - 5
+			</label>
+			<label class="radio-inline">
+			  <input type="radio" name="rl_friends" id="rl_friends3" value="10" /> 6 or more
+			</label>
+		</div>
+	</div>
+
+	<div class="form-group">
+	    <div class="col-lg-offset-3 col-lg-9">
+	      <button type="submit" class="btn btn-primary btn-lg">Calculate</button>
+	    </div>
+	  </div>
+	</form>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Grumpeh{% endblock %}
+
+{% block content %}
+
+
+<h2>Are you grumpy?</h2>
+
+<img src="{{ url_for('.static', filename='img/cat.jpg') }}" class="img-thumbnail" />
+
+<div class="row">
+	<div class="col-lg-12">
+		<button type="button" class="btn btn-info btn-lg">I are teh king of grumpeh!</button>
+		<button type="button" class="btn btn-warning btn-lg">Huh?</button>
+	</div>
+</div>
+{% endblock %}
