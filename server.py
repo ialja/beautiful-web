@@ -52,7 +52,7 @@ def complicator():
 				        popularity_online = popularity_online)
 
         if not age.isdigit():
-        	errors['error_age'] = "Age should be a whole numbe, written with digits."
+        	errors['error_age'] = "Age should be a whole number, written with digits."
         	have_error = True
 
         if not ignorance.isdigit():
