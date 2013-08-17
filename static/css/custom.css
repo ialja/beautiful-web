@@ -93,36 +93,46 @@ body {
 -------------------------------------------------- */
 
 /* Carousel base class */
-.carousel {
+.page-header {
+  position: relative;
+  padding-top: 0px;
+  margin-top: -20px;
   margin-bottom: 40px;
+  height: 300px;
+  background-color:#0087DC;
+  background-image: url("http://lorempixel.com/600/600/cats");
+  background-repeat:no-repeat;
+  background-position: top center;
+  background-size: 100%;
 }
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
+
+.page-header h1 {
+  font-size: 4em;
   z-index: 0;
 }
 
-.carousel-caption p {
+.page-header h1 small {
     margin-bottom: 20px;
-    font-size: 2em;
+    font-size: 0.8em;
     line-height: 1.4;
+    color: #fff;
 }
 
-/* Declare heights because of positioning of img element */
-.carousel .item {
-  height: 300px;
-  background-color:#0087DC;
-}
-.carousel img {
+.page-header .item {
   position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 300px;
+  right: 15%;
+  bottom: 20px;
+  left: 15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
 }
 
-.carousel h1 {
-  font-size: 60px;
-}
+
+
 
 
 /* RESPONSIVE CSS
@@ -140,12 +150,6 @@ body {
     border-radius: 4px;
   }
 
-  /* Bump up size of carousel content */
-  .carousel-caption p {
-    margin-bottom: 20px;
-    font-size: 2.5em;
-    line-height: 1.4;
-  }
 
 }
 
@@ -156,6 +160,17 @@ body {
   body {
     padding-bottom: 120px;
   }
+
+  .page-header h1 {
+    font-size: 3em;
+    z-index: 0;
+  }
+
+  .page-header h1 small {
+      margin-bottom: 10px;
+      font-size: 0.6em;
+
+}
 
 }
 
