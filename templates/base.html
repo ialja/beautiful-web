@@ -3,7 +3,7 @@
 
 	<head>
 		<meta name="description" content="Just a test web app created with Flask and Bootstrap, deployed on Heroku." />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale = 1.0">
 		<!-- making sure the app always find the static folder with bootstrap -->
 		<link href="{{ url_for('.static', filename='bootstrap/css/bootstrap.css') }}" rel="stylesheet" />
 		<link href="{{ url_for('.static', filename='css/bootstrap.icon-large.min.css') }}" rel="stylesheet" />
@@ -48,7 +48,7 @@
 <!-- Carousel
 ================================================== -->
 <div id="myCarousel" class="carousel slide">
-  <div class="carousel-inner">
+<!--  <div class="carousel-inner"> -->
     <div class="item active">
       <img src="http://lorempixel.com/800/300/cats">
       <div class="container">
@@ -60,7 +60,7 @@
       	</div>
       </div>
     </div>
-  </div>
+<!--  </div> -->
 </div><!-- /.carousel -->
 
 
