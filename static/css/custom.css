@@ -61,6 +61,7 @@ body {
   z-index: 10;
 }
 
+
 .navbar-inverse .navbar-link {
   color: #0087DC;
 }
@@ -108,7 +109,6 @@ body {
 
 .page-header h1 {
   font-size: 4em;
-  z-index: 0;
 }
 
 .page-header h1 small {
@@ -116,6 +116,7 @@ body {
     font-size: 0.8em;
     line-height: 1.4;
     color: #fff;
+
 }
 
 .page-header .item {
@@ -123,7 +124,6 @@ body {
   right: 15%;
   bottom: 20px;
   left: 15%;
-  z-index: 10;
   padding-top: 20px;
   padding-bottom: 20px;
   color: #ffffff;
