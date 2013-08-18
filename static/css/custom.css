@@ -1,10 +1,10 @@
 .accordion-toggle {
-	color:#00A0D8;
-	font-weight: bold;
+  color:#00A0D8;
+  font-weight: bold;
 }
 
 h2, h3 {
-	color: #0087DC;
+  color: #0087DC;
 }
 
 /* flex-video from BOOTPLY.com
@@ -49,46 +49,12 @@ body {
 
 
 
-/* CUSTOMIZE THE NAVBAR
--------------------------------------------------- */
-
-/* Special class on .container surrounding .navbar, used for positioning it into place. */
-.navbar-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-}
 
 
-.navbar-inverse .navbar-link {
-  color: #0087DC;
-}
 
-.navbar-inverse .navbar-link:hover {
-  color: #FF760A;
-}
 
-.navbar-inverse .navbar-nav > li > a {
-  color: #fff;
-}
 
-.navbar-inverse .navbar-nav > li > a:hover,
-.navbar-inverse .navbar-nav > li > a:focus {
-  color: #FF760A;
-  background-color: transparent;
-}
 
-.navbar-inverse .navbar-brand {
-  color: #FF760A;
-}
-
-.navbar-inverse .navbar-brand:hover,
-.navbar-inverse .navbar-brand:focus {
-  color: #ffffff;
-  background-color: transparent;
-}
 
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
@@ -132,27 +98,6 @@ body {
 }
 
 
-
-
-
-/* RESPONSIVE CSS
--------------------------------------------------- */
-
-@media (min-width: 768px) {
-
-  /* Navbar positioning foo */
-  .navbar-wrapper {
-    margin-top: 20px;
-    margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
-  }
-  /* The navbar becomes detached from the top, so we round the corners */
-  .navbar-wrapper .navbar {
-    border-radius: 4px;
-  }
-
-
-}
-
 /* some mobile fixes
 -------------------------------------------------- */
 
@@ -173,4 +118,3 @@ body {
 }
 
 }
-
