@@ -79,12 +79,9 @@ def complicator():
         if have_error:
         	return render_template('complicator_form.html', **errors)
         else:
-        #if age.isdigit() and ignorance.isdigit() and money_have.isdigit() and money_spent.isdigit() and money_wants.isdigit() and popularity_online.isdigit():
             money = (int(money_have) - int(money_spent)) - int(money_wants)
             score = overall_score(int(age), int(gender), int(status), int(ignorance), money, int(popularity_online), int(rl_friends))
             return render_template('complicator_result.html', complexity = score, level = check_level(score), interpretation = interpret_score(score))
-        #else:
-        #    return render_template('complicator_error.html', message = "Age, Ignorance, Money have, Money wants, Money spent and Klout score must be digits without special signs!")
     else:
         return render_template('complicator_form.html')
 
