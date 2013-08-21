@@ -1,6 +1,6 @@
 # Testing Flask & Bootstrap
 
-This is just a simple web app, created with [Flask](http://flask.pocoo.org). It uses a Python script for the quiz and various Twitter [Bootstrap](http://getbootstrap.com) 3 RC1 elements. 
+This is just a simple web app, created with [Flask](http://flask.pocoo.org). It uses a Python script for the quiz and various Twitter [Bootstrap 3](http://getbootstrap.com) elements. 
 
 # Deployed on Heroku
 

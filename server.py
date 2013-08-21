@@ -70,11 +70,9 @@ def complicator():
         if not money_spent.isdigit():
         	errors['error_m_spent'] = "Estimate the amount you spent today with numbers."
         	have_error = True
-        print popularity_online, "POPULARITY"
         if not popularity_online.isdigit():
 			errors['error_klout'] = "Your Klout score is a number between 1 and 100. Write 0 if you don't know what this is."
 			have_error = True
-			print "BOOOOOO"
 
         if have_error:
         	return render_template('complicator_form.html', **errors)
