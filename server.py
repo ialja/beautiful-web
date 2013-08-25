@@ -31,7 +31,7 @@ def moar():
 	return render_template('moar.html')
 
 @app.route("/complexicator", methods=['GET', 'POST'])
-def complicator():
+def complexicator():
     if request.method == 'POST':
     	have_error = False
         age = request.form['age']

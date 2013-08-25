@@ -30,12 +30,17 @@
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse navbar-ex1-collapse">
     <ul class="nav navbar-nav">
-	    <li><a href="/cats">Cats</a></li>
-	    <li><a href="/hipster">Hipster</a></li>
-	    <li><a href="/grumpy">Grumpy</a></li>
-	    <li><a href="/complexicator">Quiz</a></li>
-	    <li><a href="/faq">FAQ</a></li>
-	    <li><a href="/moar">Moar</a></li>
+		{% for endpoint, caption in [
+		      ('cats', 'Cats'),
+		      ('hipster', 'Hipster'),
+		      ('grumpy', 'Grumpy'),
+		      ('faq', 'FAQ'),
+		      ('complexicator', 'Quiz'),
+		      ('moar', 'Moar')
+		    ] %}
+		 <li{% if endpoint == request.endpoint %} class="active"><a href="#" class="navbar-link">{{ caption }}</a>
+		 {% else %}><a href={{ url_for(endpoint) }}>{{ caption }}</a>{% endif%}</li>
+		{% endfor %}   	
     </ul>
 
   </div><!-- /.navbar-collapse -->
@@ -48,11 +53,6 @@
   		<h1>Beautiful web<br /><small>{{ self.title() }}</small></h1>
 	</div>
 </div>
-
-
-
-
-
 
 
 
