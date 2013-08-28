@@ -39,7 +39,7 @@
 		      ('moar', 'Moar')
 		    ] %}
 		 <li{% if endpoint == request.endpoint %} class="active"><a href="#" class="navbar-link">{{ caption }}</a>
-		 {% else %}><a href={{ url_for(endpoint) }}>{{ caption }}</a>{% endif%}</li>
+		 {% else %}><a href={{ url_for(endpoint) }}>{{ caption }}</a>{% endif %}</li>
 		{% endfor %}   	
     </ul>
 
@@ -73,7 +73,9 @@
 
 
 	<script src="{{ url_for('.static', filename='js/jquery-1.10.2.min.js') }}"></script>
+		<script src="{{ url_for('.static', filename='js/jquery.validate.js') }}"></script>
 	<script src="{{ url_for('.static', filename='bootstrap/js/bootstrap.js') }}"></script>
+		<script src="{{ url_for('.static', filename='js/myscript.js') }}"></script>
 
 	</body>
 </html>

@@ -51,29 +51,6 @@ def complexicator():
 				        money_spent = money_spent,
 				        popularity_online = popularity_online)
 
-        if not age.isdigit():
-        	errors['error_age'] = "Age should be a whole number, written with digits."
-        	have_error = True
-
-        if not ignorance.isdigit():
-        	errors['error_ignorance'] = "Estimate your ignorance on a scale from 0 to 100."
-        	have_error = True
-
-        if not money_have.isdigit():
-        	errors['error_m_have'] = "Estimate the amount you currently have with numbers."
-        	have_error = True
-
-        if not money_wants.isdigit():
-        	errors['error_m_wants'] = "Estimate the amount you currently want with numbers."
-        	have_error = True
-
-        if not money_spent.isdigit():
-        	errors['error_m_spent'] = "Estimate the amount you spent today with numbers."
-        	have_error = True
-        if not popularity_online.isdigit():
-			errors['error_klout'] = "Your Klout score is a number between 1 and 100. Write 0 if you don't know what this is."
-			have_error = True
-
         if have_error:
         	return render_template('complicator_form.html', **errors)
         else:
