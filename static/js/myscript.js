@@ -74,7 +74,10 @@ jQuery(function($) {
 		},
         errorPlacement: function ($error, $element) {
             var name = $element.attr("name");
+          	console.log(name);
+            if($error) {console.log("bla");}
             $(".error-label-" + name).append($error);
+            
         },
 
 	});

@@ -33,7 +33,6 @@ def moar():
 @app.route("/complexicator", methods=['GET', 'POST'])
 def complexicator():
     if request.method == 'POST':
-    	have_error = False
         age = request.form['age']
         gender = request.form['gender']
         status = request.form['status']
@@ -44,19 +43,9 @@ def complexicator():
         popularity_online = request.form['popularity_online']
         rl_friends = request.form['rl_friends']
 
-        errors = dict(age = age,
-				        ignorance = ignorance,
-				        money_have = money_have,
-				        money_wants = money_wants,
-				        money_spent = money_spent,
-				        popularity_online = popularity_online)
-
-        if have_error:
-        	return render_template('complicator_form.html', **errors)
-        else:
-            money = (int(money_have) - int(money_spent)) - int(money_wants)
-            score = overall_score(int(age), int(gender), int(status), int(ignorance), money, int(popularity_online), int(rl_friends))
-            return render_template('complicator_result.html', complexity = score, level = check_level(score), interpretation = interpret_score(score))
+        money = (int(money_have) - int(money_spent)) - int(money_wants)
+        score = overall_score(int(age), int(gender), int(status), int(ignorance), money, int(popularity_online), int(rl_friends))
+        return render_template('complicator_result.html', complexity = score, level = check_level(score), interpretation = interpret_score(score))
     else:
         return render_template('complicator_form.html')
 
