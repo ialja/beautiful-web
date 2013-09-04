@@ -115,6 +115,14 @@ body {
 }
 
 
+/* form .error-label color
+}-------------------------------------------------- */
+
+
+.has-error .error-label {
+  color: #b94a48;
+  font-weight: normal;
+}
 
 /* flex-video from BOOTPLY.com
 }-------------------------------------------------- */

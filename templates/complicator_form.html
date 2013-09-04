@@ -12,7 +12,7 @@
 	  <div class="form-group">
 	    <label for="age" class="col-lg-3 control-label">How old are you?</label>
 	    <div class="col-lg-9">
-	    	<div class="error-label"></div>
+	    	<div class="error-label-age error-label"></div>
 	      	<input type="number" class="form-control" id="age" placeholder="Your age" name="age" value="{{age}}" required />
 	    </div>
 	  </div>
@@ -21,7 +21,7 @@
 	<div class="form-group">
 	  	<label for="gender" class="col-lg-3 control-label">Your gender?</label>
 	  	<div class="col-lg-9">
-	    	<div class="error-label"></div>
+	    	<div class="error-label-gender error-label"></div>
 		  	<label class="radio-inline">
 			  <input type="radio" name="gender" id="gender1" value="1" /> Male
 			</label>
@@ -34,7 +34,7 @@
 	<div class="form-group">
 	  	<label for="status" class="col-lg-3 control-label">Relationship status?</label>
 	  	<div class="col-lg-9">
-	    	<div class="error-label"></div>
+	    	<div class="error-label-status error-label"></div>
 		  	<label class="radio-inline">
 			  <input type="radio" name="status" id="status1" value="2" /> single
 			</label>
@@ -59,7 +59,7 @@
 	<div class="form-group{% if error_ignorance %} has-error{% endif %}">
 	    <label for="ignorance" class="col-lg-3 control-label">How ignorant are you?</label>
 	    <div class="col-lg-9">
-	    	<div class="error-label"></div>
+	    	<div class="error-label-ignorance error-label"></div>
 	      	<input type="number" class="form-control" id="ignorance" placeholder="Estimated ignorance" name="ignorance" value="{{ignorance}}" required />
 	    </div>
 	</div>
@@ -67,7 +67,7 @@
 	<div class="form-group{% if error_m_have %} has-error{% endif %}">
 	    <label for="money_have" class="col-lg-3 control-label">How much money do you have?</label>
 	    <div class="col-lg-9">
-	    	<div class="error-label"></div>
+	    	<div class="error-label-money_have error-label"></div>
 	      	<input type="number" class="form-control" id="money_have" placeholder="Estimated balance today in €" name="money_have" value="{{money_have}}" required />
 	    </div>
 	</div>
@@ -75,7 +75,7 @@
 	<div class="form-group{% if error_m_wants %} has-error{% endif %}">
 	    <label for="money_wants" class="col-lg-3 control-label">How much money do you want?</label>
 	    <div class="col-lg-9">
-	    	<div class="error-label"></div>
+	    	<div class="error-label-money_wants error-label"></div>
 	      	<input type="number" class="form-control" id="money_wants" placeholder="Estimated needs today in €" name="money_wants" value="{{money_wants}}" required />
 	    </div>
 	</div>
@@ -83,7 +83,7 @@
 	<div class="form-group{% if error_m_spent %} has-error{% endif %}">
 	    <label for="money_spent" class="col-lg-3 control-label">How much money did you spend?</label>
 	    <div class="col-lg-9">
-	    	<div class="error-label"></div>
+	    	<div class="error-label-money_spent error-label"></div>
 	      	<input type="number" class="form-control" id="money_spent" placeholder="Estimated spent today in €" name="money_spent" value="{{money_spent}}" required />
 	    </div>
 	</div>
@@ -91,7 +91,7 @@
 	<div class="form-group{% if error_klout %} has-error{% endif %}">
 	    <label for="popularity_online" class="col-lg-3 control-label">Your Klout score?</label>
 	    <div class="col-lg-9">
-	    	<div class="error-label"></div>
+	    	<div class="error-label-popularity_online error-label"></div>
 	      	<input type="number" class="form-control" id="popularity_online" placeholder="Write 0 if you don't use Klout" name="popularity_online" value="{{popularity_online}}" required />
 	    </div>
 	</div>
@@ -99,7 +99,7 @@
 	<div class="form-group">
 	  	<label for="rl_friends" class="col-lg-3 control-label">How many real friends do you have?</label>
 	  	<div class="col-lg-9">
-	    	<div class="error-label"></div>
+	    	<div class="error-label-rl_friends error-label"></div>
 		  	<label class="radio-inline">
 			  <input type="radio" name="rl_friends" id="rl_friends1" value="0" /> 0 - 2
 			</label>

@@ -6,7 +6,7 @@ jQuery(function($) {
 		rules: {
 			age: {
 				digits: true,
-				required: true
+				required: true,
 			},
 			gender: "required",
 			status: "required",
@@ -72,6 +72,10 @@ jQuery(function($) {
 		success: function(element) {
 			$(element).closest('.form-group').removeClass('has-error').addClass('has-success');
 		},
+        errorPlacement: function ($error, $element) {
+            var name = $element.attr("name");
+            $(".error-label-" + name).append($error);
+        },
 
 	});
 	
