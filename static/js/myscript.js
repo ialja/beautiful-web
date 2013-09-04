@@ -74,10 +74,9 @@ jQuery(function($) {
 		},
         errorPlacement: function ($error, $element) {
             var name = $element.attr("name");
-          	console.log(name);
-            if($error) {console.log("bla");}
             $(".error-label-" + name).append($error);
-            
+            // to-do: figure out placement when there's no error (innerHTML empty in label.error)
+            //$('#error-' + name).prepend('<div class="error-label-' + name + ' error-label">' + $error + '</div>');
         },
 
 	});
