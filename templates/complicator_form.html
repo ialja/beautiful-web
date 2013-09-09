@@ -7,9 +7,11 @@
 	<h2>How complex is your life?</h2>
 
 	<br />
+	<noscript>
+	<div class="alert alert-warning">This quiz is easier to fill in with <strong>JavaScript enabled.</strong> Just sayin'.</div></noscript>
 	{% if error_msg %}
 	<div class="alert alert-danger">
-	<span class="glyphicon glyphicon-warning-sign"></span>
+	<span class="glyphicon glyphicon-warning-sign"></span>&nbsp;
 	<strong>{{error_msg}}</strong>
 	{{error_age}}
 	{{error_gender}}
@@ -131,5 +133,5 @@
 	    </div>
 	  </div>
 	</form>
-<noscript>Oh noez!</noscript>
+
 {% endblock %}
