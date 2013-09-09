@@ -70,14 +70,13 @@ jQuery(function($) {
 			$(element).closest('.form-group').removeClass('has-success').addClass('has-error');
 		},
 		success: function(element) {
-			$(element).closest('.form-group').removeClass('has-error').addClass('has-success');
+			element
+			.text("All good!").addClass('hidden')
+			.closest('.form-group').removeClass('has-error').addClass('has-success');
 		},
         errorPlacement: function (error, element) {
             var name = element.attr("name");
-            console.log(error[0].innerHTML);
-            if(error[0].innerHTML != "") {
             $(".error-label-" + name).append(error);
-            }
 
      },
 
