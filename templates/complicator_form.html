@@ -7,13 +7,26 @@
 	<h2>How complex is your life?</h2>
 
 	<br />
-
+	{% if error_msg %}
+	<div class="alert alert-danger">
+	<span class="glyphicon glyphicon-warning-sign"></span>
+	<strong>{{error_msg}}</strong>
+	{{error_age}}
+	{{error_gender}}
+	{{error_status}}
+	{{error_ignorance}}
+	{{error_m_have}}
+	{{error_m_wants}}
+	{{error_m_spent}}
+	{{error_klout}}
+	{{error_rl_friends}}</div>
+	{% endif %}
 	<form name="complicators" id="complexicator" action="/complexicator" method="post" class="form-horizontal" role="form">
 	  <div class="form-group">
 	    <label for="age" class="col-lg-3 control-label">How old are you?</label>
 	    <div class="col-lg-9">
 	    	<div class="error-label-age error-label"></div>
-	      	<input type="number" class="form-control" id="age" placeholder="Your age" name="age" required />
+	      	<input type="number" class="form-control" id="age" placeholder="Your age" name="age" required {% if error_msg %}value="{{age}}"{% endif %} />
 	    </div>
 	  </div>
 
@@ -23,10 +36,10 @@
 	  	<div class="col-lg-9">
 	    	<div class="error-label-gender error-label"></div>
 		  	<label class="radio-inline">
-			  <input type="radio" name="gender" id="gender1" value="1" /> Male
+			  <input type="radio" name="gender" id="gender1" value="1" {% if gender == "1" %}checked{% endif %}/> Male
 			</label>
 			<label class="radio-inline">
-			  <input type="radio" name="gender" id="gender2" value="10" /> Female
+			  <input type="radio" name="gender" id="gender2" value="10" {% if gender == "10" %}checked{% endif %}/> Female
 			</label>
 		</div>
 	</div>
@@ -36,22 +49,22 @@
 	  	<div class="col-lg-9">
 	    	<div class="error-label-status error-label"></div>
 		  	<label class="radio-inline">
-			  <input type="radio" name="status" id="status1" value="2" /> single
+			  <input type="radio" name="status" id="status1" value="2" {% if status == "2" %}checked{% endif %}/> single
 			</label>
 			<label class="radio-inline">
-			  <input type="radio" name="status" id="status2" value="4" /> in a relationship
+			  <input type="radio" name="status" id="status2" value="4" {% if status == "4" %}checked{% endif %}/> in a relationship
 			</label>
 			<label class="radio-inline">
-			  <input type="radio" name="status" id="status2" value="6" /> open relationship
+			  <input type="radio" name="status" id="status2" value="6" {% if status == "6" %}checked{% endif %}/> open relationship
 			</label>
 			<label class="radio-inline">
-			  <input type="radio" name="status" id="status2" value="8" /> it's complicated
+			  <input type="radio" name="status" id="status2" value="8" {% if status == "8" %}checked{% endif %}/> it's complicated
 			</label>
 			<label class="radio-inline">
-			  <input type="radio" name="status" id="status2" value="10" /> I'm a pizza
+			  <input type="radio" name="status" id="status2" value="10" {% if status == "10" %}checked{% endif %}/> I'm a pizza
 			</label>
 			<label class="radio-inline">
-			  <input type="radio" name="status" id="status2" value="0" /> depends who asks
+			  <input type="radio" name="status" id="status2" value="0" {% if status == "0" %}checked{% endif %}/> depends who asks
 			</label>
 		</div>
 	</div>
@@ -60,7 +73,7 @@
 	    <label for="ignorance" class="col-lg-3 control-label">How ignorant are you?</label>
 	    <div class="col-lg-9">
 	    	<div class="error-label-ignorance error-label"></div>
-	      	<input type="number" class="form-control" id="ignorance" placeholder="Estimated ignorance" name="ignorance" required />
+	      	<input type="number" class="form-control" id="ignorance" placeholder="Estimated ignorance" name="ignorance" required {% if error_msg %}value="{{ignorance}}"{% endif %}/>
 	    </div>
 	</div>
 
@@ -68,7 +81,7 @@
 	    <label for="money_have" class="col-lg-3 control-label">How much money do you have?</label>
 	    <div class="col-lg-9">
 	    	<div class="error-label-money_have error-label"></div>
-	      	<input type="number" class="form-control" id="money_have" placeholder="Estimated balance today in €" name="money_have" required />
+	      	<input type="number" class="form-control" id="money_have" placeholder="Estimated balance today in €" name="money_have" required {% if error_msg %}value="{{money_have}}"{% endif %}/>
 	    </div>
 	</div>
 
@@ -76,7 +89,7 @@
 	    <label for="money_wants" class="col-lg-3 control-label">How much money do you want?</label>
 	    <div class="col-lg-9">
 	    	<div class="error-label-money_wants error-label"></div>
-	      	<input type="number" class="form-control" id="money_wants" placeholder="Estimated needs today in €" name="money_wants" required />
+	      	<input type="number" class="form-control" id="money_wants" placeholder="Estimated needs today in €" name="money_wants" required {% if error_msg %}value="{{money_wants}}"{% endif %}/>
 	    </div>
 	</div>
 
@@ -84,7 +97,7 @@
 	    <label for="money_spent" class="col-lg-3 control-label">How much money did you spend?</label>
 	    <div class="col-lg-9">
 	    	<div class="error-label-money_spent error-label"></div>
-	      	<input type="number" class="form-control" id="money_spent" placeholder="Estimated spent today in €" name="money_spent" required />
+	      	<input type="number" class="form-control" id="money_spent" placeholder="Estimated spent today in €" name="money_spent" required {% if error_msg %}value="{{money_spent}}"{% endif %}/>
 	    </div>
 	</div>
 
@@ -92,7 +105,7 @@
 	    <label for="popularity_online" class="col-lg-3 control-label">Your Klout score?</label>
 	    <div class="col-lg-9">
 	    	<div class="error-label-popularity_online error-label"></div>
-	      	<input type="number" class="form-control" id="popularity_online" placeholder="Write 0 if you don't use Klout" name="popularity_online" required />
+	      	<input type="number" class="form-control" id="popularity_online" placeholder="Write 0 if you don't use Klout" name="popularity_online" required {% if error_msg %}value="{{popularity_online}}"{% endif %}/>
 	    </div>
 	</div>
 
@@ -101,13 +114,13 @@
 	  	<div class="col-lg-9">
 	    	<div class="error-label-rl_friends error-label"></div>
 		  	<label class="radio-inline">
-			  <input type="radio" name="rl_friends" id="rl_friends1" value="0" /> 0 - 2
+			  <input type="radio" name="rl_friends" id="rl_friends1" value="0" {% if rl_friends == "0" %}checked{% endif %}/> 0 - 2
 			</label>
 			<label class="radio-inline">
-			  <input type="radio" name="rl_friends" id="rl_friends2" value="4" /> 3 - 5
+			  <input type="radio" name="rl_friends" id="rl_friends2" value="4" {% if rl_friends == "4" %}checked{% endif %}/> 3 - 5
 			</label>
 			<label class="radio-inline">
-			  <input type="radio" name="rl_friends" id="rl_friends3" value="10" /> 6 or more
+			  <input type="radio" name="rl_friends" id="rl_friends3" value="10"  {% if rl_friends == "10" %}checked{% endif %}/> 6 or more
 			</label>
 		</div>
 	</div>
@@ -118,5 +131,5 @@
 	    </div>
 	  </div>
 	</form>
-
+<noscript>Oh noez!</noscript>
 {% endblock %}
