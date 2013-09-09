@@ -72,12 +72,14 @@ jQuery(function($) {
 		success: function(element) {
 			$(element).closest('.form-group').removeClass('has-error').addClass('has-success');
 		},
-        errorPlacement: function ($error, $element) {
-            var name = $element.attr("name");
-            $(".error-label-" + name).append($error);
-            // to-do: figure out placement when there's no error (innerHTML empty in label.error)
-            //$('#error-' + name).prepend('<div class="error-label-' + name + ' error-label">' + $error + '</div>');
-        },
+        errorPlacement: function (error, element) {
+            var name = element.attr("name");
+            console.log(error[0].innerHTML);
+            if(error[0].innerHTML != "") {
+            $(".error-label-" + name).append(error);
+            }
+
+     },
 
 	});
 	
