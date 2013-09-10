@@ -5,7 +5,7 @@ from messenger import interpret_score
 app = Flask(__name__)
 
 
-# just a simple test page
+# just a simple test page, no HTML
 @app.route('/test')
 def test():
 	return "This is just a test."
@@ -30,6 +30,7 @@ def faq():
 def moar():
 	return render_template('moar.html')
 
+# fancy page that takes both GET and POST requests
 @app.route("/complexicator", methods=['GET', 'POST'])
 def complexicator():
     if request.method == 'POST':
@@ -117,6 +118,20 @@ def complexicator():
             return render_template('complicator_result.html', complexity = score, level = check_level(score), interpretation = interpret_score(score))
     else:
         return render_template('complicator_form.html')
+
+# error pages
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
+@app.errorhandler(403)
+def page_not_found(e):
+    return render_template('403.html'), 403
+
+@app.errorhandler(500)
+def page_not_found(e):
+    return render_template('500.html'), 500
+
 
 # defining root page
 @app.route('/')
