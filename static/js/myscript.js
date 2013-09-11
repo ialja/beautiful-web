@@ -6,13 +6,14 @@ jQuery(function($) {
 		rules: {
 			age: {
 				digits: true,
+				max: 160,
 				required: true,
 			},
 			gender: "required",
 			status: "required",
 			ignorance: {
 				digits: true,
-				maxlength: 3,
+				max: 100,
 				required: true
 			},
 			money_have: {
@@ -29,7 +30,7 @@ jQuery(function($) {
 			},
 			popularity_online: {
 				digits: true,
-				maxlength: 3,
+				max: 100,
 				required: true
 			},
 			rl_friends: "required",
@@ -38,6 +39,7 @@ jQuery(function($) {
 		messages: {
 			age: {
 				digits: "Age should be a whole number, written with digits.",
+				max: "Surely your're not more than 160 years old?",
 				required: "Don't worry, you're definitely not too old"
 			},
 			gender: "Male or female, or the closest one.",
@@ -45,7 +47,7 @@ jQuery(function($) {
 			ignorance: {
 				digits: "Use only numbers between 0 and 100.",
 				required: "Estimate your ignorance on a scale from 0 to 100.",
-				maxlength: "Pick a number between 0 and 100."
+				max: "Pick a number between 0 and 100."
 			},
 			money_have: {
 				digits: "Use only numbers, please.",
@@ -62,7 +64,7 @@ jQuery(function($) {
 			popularity_online: {
 				digits: "Your Klout score is a number between 1 and 100. Write 0 if you don't know what this is.",
 				required: "Your Klout score is a number between 1 and 100. Write 0 if you don't know what this is.",
-				maxlength: "Can't have a score greater than 100."
+				max: "Can't have a score greater than 100."
 			},
 			rl_friends: "How many people could you call in the middle of the night for a flat tire?",
 		},
